@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    #   set is used because it doesn't allow duplicate values
-    res = 0
-    for num in set(my_list):
-        res += num
-    return res 
+    unique_values = []
+    sum = 0
+    for elem in my_list:
+        if elem in unique_values:
+            continue
+        else:
+            unique_values.append(elem)
+    for item in unique_values:
+        sum += item
+    return sum
